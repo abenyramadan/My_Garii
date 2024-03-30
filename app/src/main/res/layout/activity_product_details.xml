@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.product_details">
+
+  <ImageView
+      android:id="@+id/productImage"
+      android:layout_width="340dp"
+      android:layout_height="340dp"
+      android:layout_marginTop="8dp"
+      android:contentDescription="@string/Autrotonics"
+      android:src="@drawable/sanfransisco"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.492"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <LinearLayout
+      android:id="@+id/linearLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:gravity="center_horizontal"
+      android:orientation="horizontal"
+      app:layout_constraintTop_toBottomOf="@+id/price"
+      tools:layout_editor_absoluteX="10dp">
+
+    <ImageView
+        android:id="@+id/add_items"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="7dp"
+        android:contentDescription="@string/add"
+        android:src="@drawable/baseline_exposure_plus_1_24" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_1"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/remove_items"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="7dp"
+        android:contentDescription="@string/remove"
+        android:src="@drawable/baseline_indeterminate_check_box_24" />
+
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/name"
+      android:layout_width="337dp"
+      android:layout_height="48dp"
+      android:textSize="24sp"
+      app:layout_constraintStart_toStartOf="@+id/productImage"
+      app:layout_constraintTop_toBottomOf="@+id/productImage" />
+
+  <TextView
+      android:id="@+id/productdescription"
+      android:layout_width="382dp"
+      android:layout_height="87dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:text="@string/text_view"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/name" />
+
+  <TextView
+      android:id="@+id/price"
+      android:layout_width="326dp"
+      android:layout_height="28dp"
+      android:textColor="@color/black"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="@+id/productdescription"
+      app:layout_constraintStart_toStartOf="@+id/productdescription"
+      app:layout_constraintTop_toBottomOf="@+id/productdescription" />
+
+
+  <Button
+      android:id="@+id/addToCart"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginEnd="24dp"
+      android:layout_marginBottom="8dp"
+      android:text="@string/add_to_cart"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <Button
+      android:id="@+id/buyNowBtn"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="50dp"
+      android:layout_marginEnd="24dp"
+      android:layout_marginBottom="32dp"
+      android:clickable="true"
+      android:focusable="true"
+      android:text="@string/buy_now"
+      app:layout_constraintBottom_toTopOf="@+id/addToCart"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

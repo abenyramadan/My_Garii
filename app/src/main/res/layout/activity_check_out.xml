@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pink">
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/enter_your_card_details"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/CardNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="40dp"
+        android:hint="@string/cardnumber"
+        app:boxBackgroundColor="@color/design_default_color_on_primary"
+        android:autofillHints="creditCardNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+        <EditText
+            android:id="@+id/nCreditCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="creditCardNumber"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/CardExpiry"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/cardexpiry"
+        app:boxBackgroundColor="@color/design_default_color_on_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardNumber">
+
+        <EditText
+            android:id="@+id/nCardExpiry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="creditCardExpirationDate"
+            android:inputType="date"
+
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/CardCVV"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/cvv"
+        app:boxBackgroundColor="@color/design_default_color_on_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardExpiry">
+
+        <EditText
+            android:id="@+id/nCardCVV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="name"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="#020202"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/PayNowBtn"
+        android:layout_width="245dp"
+        android:layout_height="85dp"
+
+        android:layout_marginBottom="80dp"
+        android:text="@string/pay_now"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardCVV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
